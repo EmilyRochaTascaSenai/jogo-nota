@@ -25,4 +25,6 @@ while rodando:
         if evento.type == pygame.QUIT:
             rodando = False
 tela.blit(FUNDO,(0,0))
-
+#desenhando as imagens
+bela.movimentar_via_controle(pygame.K_RIGHT,pygame.K_LEFT)
+bela.desenhar(tela)
