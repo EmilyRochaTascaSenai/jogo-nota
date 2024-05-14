@@ -1,6 +1,7 @@
 import pygame
 
 class Personagem:
+
     def __init__(self,arquivo_imagem,largura_imagem,altura_imagem,x_inicial,y_inicial):
         self.imagem = pygame.image.load(arquivo_imagem)
 
@@ -17,8 +18,11 @@ class Personagem:
     def desenhar(self, tela):
         tela.blit(self.imagem,(self.pos_x,self.pos_y))
 
+
+
     def movimentar_via_controle(self,direita,esquerda):
         teclas = pygame.key.get_pressed()
+
         if teclas[esquerda]:
             if self.pos_x > 0:
                 self.pos_x = self.pos_x - 5
@@ -27,3 +31,4 @@ class Personagem:
             if self.pos_x < 800-self.largura:
                 self.pos_x = self.pos_x + 5
         
+       
