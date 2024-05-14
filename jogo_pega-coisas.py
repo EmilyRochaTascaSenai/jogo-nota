@@ -13,9 +13,9 @@ FUNDO=pygame.image.load("Imagens/princesas_mundo.png")
 FUNDO = pygame.transform.scale(FUNDO,(800,500))
 
 #criando personagem
-bela=jogador1 = Personagem("imagens/bela.png",100,50,150,0)
-
-
+bela= Personagem("imagens/bela.png",100,50,150,0)
+#Criando um relogio para controlar o FPS
+clock = pygame.time.Clock()
 rodando = True
 while rodando:
     #Tratando eventos
@@ -24,4 +24,5 @@ while rodando:
             print("Você clicou!!")
         if evento.type == pygame.QUIT:
             rodando = False
+tela.blit(FUNDO,(0,0))
 
