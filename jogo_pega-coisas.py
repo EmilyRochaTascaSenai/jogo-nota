@@ -13,3 +13,4 @@ FUNDO = pygame.transform.scale(FUNDO,(800,500))
 
 #criando personagens
 
+bela=Personagem("Imagens/bela.png",100,50,850,50)
