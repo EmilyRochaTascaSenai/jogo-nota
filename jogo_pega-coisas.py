@@ -8,11 +8,13 @@ tela = pygame.display.set_mode((800,500))
 pygame.display.set_caption("Jogo das princesas")
 tela.fill((80,120,200))
 
-FUNDO = pygame.image.load("imagens/princesas_mundo.png")
+#criando imagens
+FUNDO=pygame.image.load("Imagens/princesas_mundo.png")
 FUNDO = pygame.transform.scale(FUNDO,(800,500))
 
-#Criando um relogio para controlar o FPS
-clock = pygame.time.Clock()
+#criando personagem
+bela=jogador1 = Personagem("imagens/bela.png",100,50,150,0)
+
 
 rodando = True
 while rodando:
