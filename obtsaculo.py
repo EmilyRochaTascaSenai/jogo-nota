@@ -1,4 +1,3 @@
-
 import pygame
 import random
 class Obstaculo:
@@ -23,5 +22,6 @@ class Obstaculo:
             self.pos_x = 850
             self.velocidade=random.randint(5,20)
 
-        def desenhar(self, tela):
-           tela.blit (self.imagem,(self.pos_x,self.pos_y))
+    def desenhar(self, tela):
+        tela.blit(self.imagem,(self.pos_x,self.pos_y))      
+   
