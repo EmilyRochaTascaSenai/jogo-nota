@@ -31,6 +31,7 @@ while rodando:
     #configurando a fonte
     fonte=pygame.font.SysFont("arial black ",12)
     texto_pontucao_bela=fonte.render("Pontuação da bela",False,(255,203,219))
+    tela.blit(texto_pontucao_bela,(0,0))
     #Atualizando a tela
     pygame.display.update()
 
