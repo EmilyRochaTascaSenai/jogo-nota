@@ -14,5 +14,12 @@ FUNDO = pygame.transform.scale(FUNDO,(800,500))
 #Criando um relogio para controlar o FPS
 clock = pygame.time.Clock()
 
-
+rodando = True
+while rodando:
+    #Tratando eventos
+    for evento in pygame.event.get():
+        if evento.type == pygame.MOUSEBUTTONDOWN:
+            print("Você clicou!!")
+        if evento.type == pygame.QUIT:
+            rodando = False
 
