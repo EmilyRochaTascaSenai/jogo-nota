@@ -41,7 +41,11 @@ while rodando:
     for fruta in lista_fruta:
         fruta.movimenta()
         fruta.desenhar(tela)
-    
+    if bela.mascara.overlap(fruta.mascara,(fruta.pos_x-bela.pos_x,fruta.pos_y-bela.pos_y)):
+        bela.pos_x=300
+        bela.pos_y=450
+        bela.pontuacao-=1
+        
     #configurando a fonte
     fonte=pygame.font.SysFont("arial black ",12)
     texto_pontucao_bela=fonte.render("Pontuação da bela",False,(255,203,219))
