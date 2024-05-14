@@ -38,6 +38,9 @@ while rodando:
     bela.movimentar_via_controle(pygame.K_RIGHT,pygame.K_LEFT)
     bela.desenhar(tela)
     
+    for fruta in lista_fruta:
+        fruta.movimenta()
+        fruta.desenhar(tela)
     
     #configurando a fonte
     fonte=pygame.font.SysFont("arial black ",12)
