@@ -13,7 +13,12 @@ FUNDO=pygame.image.load("Imagens/princesas_mundo.png")
 FUNDO = pygame.transform.scale(FUNDO,(800,500))
 
 #criando personagem
-bela= Personagem("imagens/bela.png",100,100,100,200)
+bela= Personagem("imagens/bela.png",100,100,200,300)
+#Configurando a fonte
+fonte = pygame.font.SysFont("Castellar",14)
+
+
+
 #Criando um relogio para controlar o FPS
 clock = pygame.time.Clock()
 rodando = True
@@ -28,6 +33,9 @@ while rodando:
     #desenhando as imagens
     bela.movimentar_via_controle(pygame.K_RIGHT,pygame.K_LEFT)
     bela.desenhar(tela)
+    
 
     #Atualizando a tela
     pygame.display.update()
+
+    clock.tick(60)
