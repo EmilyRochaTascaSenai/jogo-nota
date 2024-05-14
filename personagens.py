@@ -30,5 +30,5 @@ class Personagem:
         if teclas[direita]:
             if self.pos_x < 800-self.largura:
                 self.pos_x = self.pos_x + 5
-        
+    
        

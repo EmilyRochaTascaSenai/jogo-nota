@@ -1,5 +1,6 @@
 import pygame
 from personagens import Personagem
+from obtsaculo import Obstaculo
 
 pygame.init()
 
@@ -14,6 +15,7 @@ FUNDO = pygame.transform.scale(FUNDO,(800,500))
 
 #criando personagem
 bela= Personagem("imagens/bela.png",100,100,200,300)
+abacaxi=Obstaculo("Imagens/abacaxi.png",100,100,850,850)
 #Criando um relogio para controlar o FPS
 clock = pygame.time.Clock()
 rodando = True
@@ -28,10 +30,14 @@ while rodando:
     #desenhando as imagens
     bela.movimentar_via_controle(pygame.K_RIGHT,pygame.K_LEFT)
     bela.desenhar(tela)
+    abacaxi.movimentar_via_controle(pygame.K_UP,pygame.K_DOWN,pygame.K_RIGHT,pygame.K_LEFT)
+    abacaxi.desenhar(tela)
     #configurando a fonte
     fonte=pygame.font.SysFont("arial black ",12)
     texto_pontucao_bela=fonte.render("Pontuação da bela",False,(255,203,219))
     tela.blit(texto_pontucao_bela,(0,0))
+ 
+   
     #Atualizando a tela
     pygame.display.update()
 
