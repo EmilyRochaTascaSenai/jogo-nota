@@ -1,5 +1,5 @@
 import pygame
-
+from personagens import Personagem
 
 pygame.init()
 
