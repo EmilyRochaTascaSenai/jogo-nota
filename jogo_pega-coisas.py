@@ -22,7 +22,9 @@ lista_fruta = [Obstaculo("imagens/abacaxi.png",100,50,850,60),
                Obstaculo("imagens/limao.png",100,50,850,400),
                Obstaculo("imagens/limao2.png",100,50,850,60)]
 
-
+lista_bomba=[Obstaculo("imagens/bomba1.png",100,50,850,60),
+               Obstaculo("imagens/bomba2.png",100,50,850,120),
+               Obstaculo("imagens/bomba3.png",100,50,850,185)]
 #Criando um relogio para controlar o FPS
 clock = pygame.time.Clock()
 rodando = True
@@ -45,13 +47,18 @@ while rodando:
         bela.pos_x=300
         bela.pos_y=450
         bela.pontuacao-=1
-        
+    for bomba in lista_bomba:
+        bomba.movimenta()
+        bomba.desenhar(tela)
+    if bela.mascara.overlap(bomba.mascara,(bomba.pos_x-bela.pos_x,bomba.pos_y-bela.pos_y)):
+        bela.pos_x=300
+        bela.pos_y=450
+        bela.pontuacao-=1 
     #configurando a fonte
     fonte=pygame.font.SysFont("arial black ",12)
     texto_pontucao_bela=fonte.render("Pontuação da bela",False,(255,203,219))
     tela.blit(texto_pontucao_bela,(0,0))
- 
-   
+    
     #Atualizando a tela
     pygame.display.update()
 
