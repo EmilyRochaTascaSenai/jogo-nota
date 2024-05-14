@@ -11,6 +11,8 @@ tela.fill((80,120,200))
 FUNDO = pygame.image.load("imagens/princesas_mundo.png")
 FUNDO = pygame.transform.scale(FUNDO,(800,500))
 
-#criando personagens
+#Criando um relogio para controlar o FPS
+clock = pygame.time.Clock()
 
-bela=Personagem("Imagens/bela.png",100,50,150,0)
+
+
