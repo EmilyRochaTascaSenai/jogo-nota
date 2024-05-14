@@ -20,7 +20,7 @@ class Obstaculo:
         self.pos_x = self.pos_x - self.velocidade
         if self.pos_x < -200:
             self.pos_x = 850
-            self.velocidade=random.randint(5,15)
+            self.velocidade=random.randint(5,10)
 
     def desenhar(self, tela):
         tela.blit(self.imagem,(self.pos_x,self.pos_y))      
